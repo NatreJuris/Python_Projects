@@ -19,14 +19,14 @@ def start(nice=0,mean=0,name=""):
 
 def describe_game(name):
     if name != "":
-        print("\nThank you for playing again, ()!".format(name))
+        print("\nThank you for playing again, {}!".format(name))
     else:
         stop = True
         while stop:
             if name == "":
                 name = input("\nWhat is you name? \n>>>").capitalize()
                 if name != "":
-                    print("\nWelcome, ()".format(name))
+                    print("\nWelcome, {}".format(name))
                     print("\nIn this game you will be greeted by several different people. \nYou can choose to be nice or mean.")
                     print("\nAt the end of the game your fate will be sealed by yuour actions.")
                     stop = False
@@ -38,7 +38,7 @@ def nice_mean(nice,mean,name):
         show_score(nice,mean,name)
         pick = input("\nA stranger approaches you for a \nconversation. Will you be nice \nor mean? (N/M) \n>>>: ").lower()
         if pick == "n":
-            print("\nThe stranger walks awau smiling...")
+            print("\nThe stranger walks away smiling...")
             nice = (nice + 1)
             stop = False
         if pick == "m":
@@ -48,7 +48,7 @@ def nice_mean(nice,mean,name):
     score(nice,mean,name)
 
 def show_score(nice,mean,name):
-        print ("\n(), your current total: \n(), Nice) and ((), Mean)".format(name,nice,mean))
+        print ("\n{}, your current total: \n{}, Nice) and ({}, Mean)".format(name,nice,mean))
 
 
 def score(nice,mean,name):
@@ -61,15 +61,14 @@ def score(nice,mean,name):
 
 
 def win(nice,mean,name):
-    print("\nNice job (), you win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name))
+    print("\nNice job \033[34myou win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name))
     again(nice,mean,name)
-    
 
   
 
 
 def lose(nice,mean,name):
-    print("\nAhh too bad, game over! \n(), you lose!".format(name))
+    print("\nAhh too bad, game over! \n{}, you lose!".format(name))
     again(nice,mean,name)
 
 
