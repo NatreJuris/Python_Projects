@@ -1,6 +1,3 @@
-from sre_constants import OP_LOCALE_IGNORE
-
-
 class River:
     substance = 'water'
     current_flow = 'downstream'
