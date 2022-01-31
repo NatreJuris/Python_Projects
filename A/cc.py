@@ -29,8 +29,25 @@ class Columbia(River):  #child class
             else:
                 print("Fish won't wait all day")
 
+class Nile(River):
+    location = 'Egypt'       #create child class
+    size = 'large'
+
+    def getfishing(self):       #child method
+            pole = input("type of pole")
+            hook = input("type of hook")
+            lure = input("type of lure")
+            if (hook == self.hook and lure == self.lure):
+                print("Get your {} and lets go.".format(pole))
+            else:
+                print("Fish won't wait all day")
+
+
 river = River()         #invokes parent and child methods
 river.getfishing()
 
 columbia = Columbia()
 columbia.getfishing()
+
+nile = Nile()
+nile.getfishing()
