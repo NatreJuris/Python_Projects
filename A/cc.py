@@ -36,8 +36,8 @@ class Nile(River):
     def getfishing(self):       #child method
             pole = input("type of pole")
             hook = input("type of hook")
-            lure = input("type of lure")
-            if (hook == self.hook and lure == self.lure):
+            gear = input("type of gear")
+            if (hook == self.hook and gear == self.gear):
                 print("Get your {} and lets go.".format(pole))
             else:
                 print("Fish won't wait all day")
