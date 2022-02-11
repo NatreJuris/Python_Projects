@@ -7,14 +7,14 @@ from tkinter import *
 
 
 win = Tk()
-b1 = Button(win, text="Source Directory", bg='orange')
+b1 = Button(win, text="Source Directory", bg='orange')      #gui layout
 b2 = Button(win, text="Destination Directory", bg='green')
 b3 = Button(win, text="Start File Transfer", bg='yellow')
 b1.grid(row=0, column=0)
 b2.grid(row=3, column=0)
 b3.grid(row=5, column=0)
 
-def but1():
+def but1():                     #button 1
     but1 = b1
     global folder_path1
     filename1 = filedialog.askdirectory()
@@ -28,7 +28,7 @@ lbl1.grid(row=0, column=3)
 
 b1.configure(command=but1)
 
-def but2():
+def but2():                     #buttton 2
     but2 = b2
     global folder_path2
     filename2 = filedialog.askdirectory()
@@ -43,10 +43,10 @@ lbl2.grid(row=3, column=3)
 
 b2.configure(command=but2)
 
-def but3():
+def but3():                     #button 3
     but3 = b3
 
-    SECONDS_IN_DAY = 24 * 60 * 60
+    SECONDS_IN_DAY = 24 * 60 * 60           #24 hour count
 
     src = folder_path1
     dst = folder_path2
