@@ -66,6 +66,7 @@ def but3():                     #button 3
 
 b3.configure(command=but3)
 
+win.mainloop()
 
 
 
