@@ -33,3 +33,5 @@ def but2():
     webbrowser.open_new("index.html")       #opens webpage in browser
 
 b2.configure(command=but2)
+
+win.mainloop()
