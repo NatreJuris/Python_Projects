@@ -15,22 +15,15 @@ l.grid(row=0, column=0)
 v = StringVar()
 e = Entry(win, textvariable = v)        #user input
 e.grid(row=3, column=0)
-
-def dis():
-    h = e.get()
-    f = open("index.html", "w")
-    f.write(h)
-
   
-
-html_content = f"<html> <body> <h1> {dis()} </h1> </body> </html>"
-
 
 def but1():
     but1 = b1
+    h = e.get()
+    html_content = f"<html> <body> <h1> {h} </h1> </body> </html>"
     f = open("index.html", "w")
     f.write(html_content)
-    print("html file created")      #creates basic web page
+    print(html_content)      #creates basic web page
 
 b1.configure(command=but1)
 
