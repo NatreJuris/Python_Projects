@@ -30,7 +30,7 @@ def but3():                     #button 3
 
     for fname in os.listdir(src):
         src_fname = os.path.join(src, fname)
-        if (last_mod_time(src_fname) < before):
+        if (last_mod_time(src_fname) > before):
             dst_fname = os.path.join(dst, fname)
             shutil.move(src_fname, dst_fname)
             print("File Transfer Started")
